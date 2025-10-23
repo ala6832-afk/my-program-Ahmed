@@ -1,21 +1,16 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 class Animal {
 public:
-    string name;
-    string color;
-
+    string name, color;
     void display() {
         cout << "Animal: " << name << ", Color: " << color << endl;
     }
 };
 
 int main() {
-    Animal a1, a2; // create objects
-
-    a1.name = "Lion";
-    a1.color = "Brown";
-
-    a2.name = "Cat";
+    Animal a1{"Lion", "Brown"}, a2{"Cat", "White"};
+    a1.display();
+    a2.display();
+}
